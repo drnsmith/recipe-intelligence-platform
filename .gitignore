@@ -32,3 +32,5 @@ __pycache__/
 data/full_dataset.csv
 data/embeddings.npy
 data/recipes.index
+data/processed_recipes.csv
+data/labelled_recipes.csv
