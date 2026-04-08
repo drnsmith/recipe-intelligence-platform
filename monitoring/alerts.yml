@@ -1,0 +1,11 @@
+groups:
+  - name: api_alerts
+    rules:
+      - alert: HighLatency
+        expr: histogram_quantile(0.95, sum(rate(api_request_latency_seconds_bucket[1m])) by (le, endpoint)) > 1
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High Latency"
+          description: "Latency for {{ $labels.endpoint }} is above 1 second (current value: {{ $value }}s)"

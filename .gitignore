@@ -1,0 +1,31 @@
+# Data
+data/raw/
+data/processed/
+data/harmonised/
+*.csv
+!data/sample_recipes.csv
+
+# Embeddings and indices
+*.npy
+*.index
+*.faiss
+
+# Redis
+dump.rdb
+
+# Environment
+env/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Models
+*.pkl
+*.h5
+*.pt
+*.bin

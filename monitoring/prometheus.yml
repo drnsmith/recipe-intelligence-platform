@@ -1,0 +1,25 @@
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+            - localhost:9093  # Change if using Alertmanager on another port
+
+rule_files:
+  - "alerts.yml"
+
+scrape_configs:
+  - job_name: "recipe_api"
+    static_configs:
+      - targets: ["localhost:8000"]
+
+groups:
+- name: Cache Monitoring
+  rules:
+  - alert: HighCacheMisses
+    expr: increase(cache_misses_total[5m]) > 10
+    for: 1m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High cache misses detected"
+      description: "Cache misses exceeded 10 in the last 5 minutes."
