@@ -1,3 +1,5 @@
+> ⚠️ **Implementation in progress.** Architecture and design are fully documented below. Code is actively being developed — follow for updates.
+
 # Recipe Intelligence Platform
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue?style=flat-square&logo=python&logoColor=white)
