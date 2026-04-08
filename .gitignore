@@ -29,3 +29,6 @@ __pycache__/
 *.h5
 *.pt
 *.bin
+data/full_dataset.csv
+data/embeddings.npy
+data/recipes.index
